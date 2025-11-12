@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ndrwl\\source\\repos\\PrintLanguageStandard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66DB2779-52F3-4AAD-B2E3-C3A210CEE7FD}|PrintLanguageStandard.vcxproj|C:\\Users\\ndrwl\\source\\repos\\PrintLanguageStandard\\PrintStandard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{66DB2779-52F3-4AAD-B2E3-C3A210CEE7FD}|PrintLanguageStandard.vcxproj|solutionrelative:PrintStandard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PrintStandard.cpp",
+              "DocumentMoniker": "C:\\Users\\ndrwl\\source\\repos\\PrintLanguageStandard\\PrintStandard.cpp",
+              "RelativeDocumentMoniker": "PrintStandard.cpp",
+              "ToolTip": "C:\\Users\\ndrwl\\source\\repos\\PrintLanguageStandard\\PrintStandard.cpp",
+              "RelativeToolTip": "PrintStandard.cpp",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAcwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-13T21:01:51.667Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
