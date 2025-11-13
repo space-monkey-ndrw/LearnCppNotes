@@ -110,11 +110,60 @@ int main()
 	// 2.7 - forward declarations
 	std::cout << "multiply is forward declared - multiply(9, 9) = " << multiply(9, 9);
 	std::cout << std::endl;
+	std::cout << std::endl;
 
 	// 2.8 - programming with multiple code files
 	std::cout << "divide() is forward declared here in main, defined in separate divide.cpp file\n";
 	int divide(int, int);
 	std::cout << "10 / 2 = " << divide(10, 2);
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	// 2.9 - naming collisions & namespaces
+
+	// 2.10 - preprocessor
+#define MY_NAME "Ndrw";
+	std::cout << "#defined MY_NAME \"Ndrw\", printing My name is: << MY_NAME\n";
+	std::cout << "My name is: " << MY_NAME;
+	std::cout << std::endl;
+
+#define PRINT_JOE
+#ifdef PRINT_JOE
+	std::cout << "#define PRINT_JOE, so this code executes\n";
+#endif
+#ifndef PRINT_BOB
+	std::cout << "did not #define PRINT_BOB, so this code executes\n";
+#endif
+
+#if 1
+	std::cout << "#if 1, so this code compiles & executes";
+#endif
+
+#if 0
+	/* this code will not execute
+	unless we
+	change #if 0 to #if 1 */
+	std::cout << "#if 0, so this code does not compile";
+#endif
+	// mostly, macro substitution doesn't happen when the macro identifier is used within another preprocessor command
+	// counter example, most forms of #if and #elif DO macro substitution within the preprocessor command
+#define FOO 9
+#ifdef FOO
+	std::cout << FOO << '\n';
+#endif
+
+#if FOO
+	std::cout << "#if FOO, but #define FOO 9, so becomes #if 9, which will compile since 9 != 0?";
+#endif
+
+#define BAR 0
+#if BAR
+	std::cout << "#if BAR, but #define BAR 0, so becomes #if 0, so this shouldn't compile";
+#endif
+	// directives are resolved before compilation, from top to bottom, on a file-by-file basis
+	
+
+	std::cout << std::endl;
 	std::cout << std::endl;
 
 	/*
