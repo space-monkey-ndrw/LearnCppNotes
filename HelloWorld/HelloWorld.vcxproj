@@ -123,9 +123,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="add2.cpp" />
     <ClCompile Include="divide.cpp" />
     <ClCompile Include="getInteger.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
+    <ClCompile Include="preprocessorDemoFunc.cpp" />
+    <ClCompile Include="square.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="add2.h" />
+    <ClInclude Include="square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

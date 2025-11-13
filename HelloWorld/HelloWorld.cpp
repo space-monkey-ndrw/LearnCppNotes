@@ -1,4 +1,6 @@
 #include <iostream> // for cin, cout...
+#include "add2.h"
+#include "square.h"
 
 bool isPrime(int x)
 {
@@ -153,17 +155,32 @@ int main()
 #endif
 
 #if FOO
-	std::cout << "#if FOO, but #define FOO 9, so becomes #if 9, which will compile since 9 != 0?";
+	std::cout << "#if FOO, but #define FOO 9, so becomes #if 9, which will compile since 9 != 0?\n";
+	std::cout << "#define's can be anywhere, like inside of functions, but best to have at top of code\n";
 #endif
 
 #define BAR 0
 #if BAR
-	std::cout << "#if BAR, but #define BAR 0, so becomes #if 0, so this shouldn't compile";
+	std::cout << "#if BAR, but #define BAR 0 before this code, so becomes #if 0, so this shouldn't compile";
 #endif
 	// directives are resolved before compilation, from top to bottom, on a file-by-file basis
-	
-
+	void doStuff();
+#define PRINT
+	std::cout << "calling doStuff()\n";
+	doStuff();
 	std::cout << std::endl;
+	
+	// 2.11 - Header Files
+	std::cout << "add2.h and add2.cpp files exist\n";
+	std::cout << "add2(999, 998) is " << add2(999, 998) << '\n';
+	std::cout << std::endl;
+
+	// 2.12 - header guards
+	std::cout << "square.h file exists with header guards\n";
+	std::cout << "square(3) = " << square(3);
+
+
+
 	std::cout << std::endl;
 
 	/*
