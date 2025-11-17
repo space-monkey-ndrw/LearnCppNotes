@@ -4,7 +4,10 @@
 #include <climits>
 #include <cstdint>
 #include <iomanip>
+#include "ch4q2.h"
+#include "ch4q3.h"
 
+#if 0
 bool isPrime(int x)
 {
 	if (x == 2)
@@ -40,10 +43,28 @@ int add(int x, int y)
 // 2.7 - forward declaration
 int multiply(int, int);
 
+int multiply(int x, int y)
+{
+	return x * y;
+}
+
+void printDouble(double x)
+{
+	std::cout << x << '\n';
+	std::cout << "in printDouble, type of x is: " << typeid(x).name() << '\n';
+}
+
+void printInt(int x)
+{
+	std::cout << x << '\n';
+	std::cout << "in printInt, type of x is: " << typeid(x).name() << '\n';
+}
+#endif
+
 int main()
 {
-	// chapter 1.5 - iostream
 #if 0
+	// chapter 1.5 - iostream
 	int x{ 5 };
 	std::cout << "x is equal to: " << x << '\n';
 	std::cout << "printing /n instead of \\n gives: " << '/n' << '\n';
@@ -415,7 +436,6 @@ int main()
 	std::cin.get(char5);
 	std::cout << "char3 is now: " << char3 << " and char4 is now: " << char4 << " and char5 is: " << char5 << '\n';
 	std::cout << '\n';
-#endif
 
 	// 4.12 - Type conversion & static_cast
 	std::cout << "void printDouble( double x ) { std::cout << x << '\\n'; }\n";
@@ -476,24 +496,11 @@ int main()
 	std::cin >> i;
 	std::cout << "  from the buffer: " << i << '\n';
 	std::cout << "However, the other fixed-width types always print & input as integral values\n";
+#endif
 	
+	// ch4q2();
+
+	ch4q3();
 
 	return 0;
-}
-
-int multiply(int x, int y)
-{
-	return x * y;
-}
-
-void printDouble(double x)
-{
-	std::cout << x << '\n';
-	std::cout << "in printDouble, type of x is: " << typeid(x).name() << '\n';
-}
-
-void printInt(int x)
-{
-	std::cout << x << '\n';
-	std::cout << "in printInt, type of x is: " << typeid(x).name() << '\n';
 }

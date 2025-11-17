@@ -124,6 +124,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="add2.cpp" />
+    <ClCompile Include="ch4q2.cpp" />
+    <ClCompile Include="ch4q3.cpp" />
     <ClCompile Include="divide.cpp" />
     <ClCompile Include="getInteger.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
@@ -132,6 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add2.h" />
+    <ClInclude Include="ch4q2.h" />
+    <ClInclude Include="ch4q3.h" />
     <ClInclude Include="square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

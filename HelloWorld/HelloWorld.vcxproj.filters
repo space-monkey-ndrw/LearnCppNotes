@@ -33,12 +33,24 @@
     <ClCompile Include="square.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch4q2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch4q3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="square.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch4q2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch4q3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
