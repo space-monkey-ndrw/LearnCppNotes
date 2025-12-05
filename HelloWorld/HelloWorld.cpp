@@ -6,6 +6,8 @@
 #include <iomanip>
 #include "ch4q2.h"
 #include "ch4q3.h"
+#include "ch5s7q1.h"
+#include <string_view>
 
 #if 0
 bool isPrime(int x)
@@ -58,6 +60,14 @@ void printInt(int x)
 {
 	std::cout << x << '\n';
 	std::cout << "in printInt, type of x is: " << typeid(x).name() << '\n';
+}
+
+#define gravity 9.8
+
+void printGravity(double g) // if instead of g we used the word gravity, it
+// would be preprocessor replaced with literal 9.8 and give weird compiler syntax errors
+{
+	std::cout << "gravity is: " << gravity << '\n';
 }
 #endif
 
@@ -192,7 +202,7 @@ int main()
 	std::cout << "calling doStuff()\n";
 	doStuff();
 	std::cout << std::endl;
-	
+
 	// 2.11 - Header Files
 	std::cout << "add2.h and add2.cpp files exist\n";
 	std::cout << "add2(999, 998) is " << add2(999, 998) << '\n';
@@ -496,11 +506,39 @@ int main()
 	std::cin >> i;
 	std::cout << "  from the buffer: " << i << '\n';
 	std::cout << "However, the other fixed-width types always print & input as integral values\n";
-#endif
-	
-	// ch4q2();
+
+	ch4q2();
 
 	ch4q3();
+
+
+	printGravity(1.1);
+	std::cout << "sizeof(int): " << sizeof(int) << " Byte(s)\n";
+
+	std::cout << "| std::int32_t          | 4 Bytes      | -2,147,483,648 to 2,147,483,647                         |\n";
+	std::cout << "| std::uint32_t         | 4 Bytes      | 0 to 4,294,967,295                                      |\n";
+
+	int a{ 2147483647 };
+	std::cout << "int is at max value 2,147,483,647... a is: " << a << '\n';
+	unsigned int b{ 4294967295 };
+	std::cout << "unsigned int b at max value 4,294,967,295... b is: " << b << '\n';
+
+	std::cout << "0xFF prints as: " << 0xFF << '\n';
+	std::cout << "0xF00 prints as: " << 0xF00 << '\n';
+	std::cout << "0xF1 prints as: " << 0xF1 << '\n';
+	std::cout << "0x100 prints as: " << 0x100 << '\n';
+
+	int bin{};
+	bin = 0b11110000;
+	std::cout << "bin = 0b11110000 prints as: " << bin << '\n';
+	long valueWithDigitSeparators{ 2'132'673'462 };
+	std::cout << "long value using digit separators: " << valueWithDigitSeparators << '\n';
+	ch5s7q1();
+#endif
+
+	std::string s{ "hello" };
+	std::string_view s2{ s };
+	std::cout << s2 << '\n';
 
 	return 0;
 }
