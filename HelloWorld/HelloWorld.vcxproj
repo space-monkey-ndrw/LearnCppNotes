@@ -128,6 +128,7 @@
     <ClCompile Include="add2.cpp" />
     <ClCompile Include="ch4q2.cpp" />
     <ClCompile Include="ch4q3.cpp" />
+    <ClCompile Include="ch5quiz.cpp" />
     <ClCompile Include="ch5s7q1.cpp" />
     <ClCompile Include="divide.cpp" />
     <ClCompile Include="getInteger.cpp" />
@@ -139,6 +140,7 @@
     <ClInclude Include="add2.h" />
     <ClInclude Include="ch4q2.h" />
     <ClInclude Include="ch4q3.h" />
+    <ClInclude Include="ch5quiz.h" />
     <ClInclude Include="ch5s7q1.h" />
     <ClInclude Include="square.h" />
   </ItemGroup>

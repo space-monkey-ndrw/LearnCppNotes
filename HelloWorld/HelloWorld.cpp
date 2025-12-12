@@ -7,7 +7,9 @@
 #include "ch4q2.h"
 #include "ch4q3.h"
 #include "ch5s7q1.h"
+#include <string>
 #include <string_view>
+#include "ch5quiz.h"
 
 #if 0
 bool isPrime(int x)
@@ -70,6 +72,13 @@ void printGravity(double g) // if instead of g we used the word gravity, it
 	std::cout << "gravity is: " << gravity << '\n';
 }
 #endif
+
+std::string_view firstAlphabetical(std::string_view s1, std::string_view s2)
+{
+	if (s1 < s2)
+		return s1;
+	return s2;
+}
 
 int main()
 {
@@ -534,11 +543,21 @@ int main()
 	long valueWithDigitSeparators{ 2'132'673'462 };
 	std::cout << "long value using digit separators: " << valueWithDigitSeparators << '\n';
 	ch5s7q1();
-#endif
 
 	std::string s{ "hello" };
 	std::string_view s2{ s };
 	std::cout << s2 << '\n';
+
+	std::string a{ "hello" }, b{ "world" };
+	std::cout << firstAlphabetical(a, b) << '\n';
+
+#endif
+
+	// ch5quiz();
+
+	//questionTwo();
+
+	q2fixed();
 
 	return 0;
 }

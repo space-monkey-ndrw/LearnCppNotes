@@ -42,6 +42,9 @@
     <ClCompile Include="ch5s7q1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch5quiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add2.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ch5s7q1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch5quiz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
