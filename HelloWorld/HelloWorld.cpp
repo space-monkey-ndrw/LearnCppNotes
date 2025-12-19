@@ -10,6 +10,9 @@
 #include <string>
 #include <string_view>
 #include "ch5quiz.h"
+#include "intExp.h"
+#include "ch6s3q2.h"
+#include "ch6quiz.h"
 
 #if 0
 bool isPrime(int x)
@@ -78,6 +81,19 @@ std::string_view firstAlphabetical(std::string_view s1, std::string_view s2)
 	if (s1 < s2)
 		return s1;
 	return s2;
+}
+
+int getValue()
+{
+	std::cout << "enter an int: ";
+	int x{};
+	std::cin >> x;
+	return x;
+}
+
+void printCalculation(int x, int y, int z)
+{
+	std::cout << x + (y * z);
 }
 
 int main()
@@ -551,13 +567,32 @@ int main()
 	std::string a{ "hello" }, b{ "world" };
 	std::cout << firstAlphabetical(a, b) << '\n';
 
-#endif
 
-	// ch5quiz();
+	ch5quiz();
 
-	//questionTwo();
+	questionTwo();
 
 	q2fixed();
+
+	printCalculation(getValue(), getValue(), getValue());
+
+	
+
+
+	std::cout << powint(7, 12) << '\n';
+	std::cout << powint_safe(7, 12) << '\n'; // 7 to the 12th power
+	std::cout << powint_safe(70, 12) << '\n'; // 70 to the 12th power (will return the max 64-bit int value)
+
+
+	ch6s3q2();
+	std::cout << std::boolalpha << (9.8f > 9.8) << '\n';
+	std::cout << std::boolalpha << (9.8f >= 9.8) << '\n';
+	std::cout << std::boolalpha << (9.8f == 9.8) << '\n';
+	std::cout << std::boolalpha << (9.8f <= 9.8) << '\n';
+	std::cout << std::boolalpha << (9.8f < 9.8) << '\n';
+#endif
+
+	ch6quiz();
 
 	return 0;
 }

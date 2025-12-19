@@ -130,9 +130,12 @@
     <ClCompile Include="ch4q3.cpp" />
     <ClCompile Include="ch5quiz.cpp" />
     <ClCompile Include="ch5s7q1.cpp" />
+    <ClCompile Include="ch6quiz.cpp" />
+    <ClCompile Include="ch6s3q2.cpp" />
     <ClCompile Include="divide.cpp" />
     <ClCompile Include="getInteger.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
+    <ClCompile Include="intExp.cpp" />
     <ClCompile Include="preprocessorDemoFunc.cpp" />
     <ClCompile Include="square.cpp" />
   </ItemGroup>
@@ -142,6 +145,9 @@
     <ClInclude Include="ch4q3.h" />
     <ClInclude Include="ch5quiz.h" />
     <ClInclude Include="ch5s7q1.h" />
+    <ClInclude Include="ch6quiz.h" />
+    <ClInclude Include="ch6s3q2.h" />
+    <ClInclude Include="intExp.h" />
     <ClInclude Include="square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

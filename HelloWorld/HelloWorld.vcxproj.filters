@@ -45,6 +45,15 @@
     <ClCompile Include="ch5quiz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="intExp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch6s3q2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch6quiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add2.h">
@@ -63,6 +72,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ch5quiz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch6s3q2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch6quiz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
