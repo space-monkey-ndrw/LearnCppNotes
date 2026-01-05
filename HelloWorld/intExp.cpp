@@ -1,8 +1,8 @@
+#include "intExp.h"
 #include <cassert> // for assert
 #include <cstdint> // for std::int64_t
 #include <iostream>
 #include <limits> // for std::numeric_limits
-#include "intExp.h"
 
 // note: exp must be non-negative
 // note: does not perform range/overflow checking, use with caution

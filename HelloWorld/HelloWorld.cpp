@@ -1,18 +1,20 @@
-#include <iostream> // for cin, cout...
 #include "add2.h"
 #include "square.h"
-#include <climits>
-#include <cstdint>
-#include <iomanip>
 #include "ch4q2.h"
 #include "ch4q3.h"
 #include "ch5s7q1.h"
-#include <string>
-#include <string_view>
 #include "ch5quiz.h"
 #include "intExp.h"
 #include "ch6s3q2.h"
 #include "ch6quiz.h"
+#include "chO2quiz.h"
+#include <climits>
+#include <cstdint>
+#include <iomanip>
+#include <iostream> // for cin, cout...
+#include <string>
+#include <string_view>
+#include <bitset>
 
 #if 0
 bool isPrime(int x)
@@ -74,7 +76,6 @@ void printGravity(double g) // if instead of g we used the word gravity, it
 {
 	std::cout << "gravity is: " << gravity << '\n';
 }
-#endif
 
 std::string_view firstAlphabetical(std::string_view s1, std::string_view s2)
 {
@@ -95,6 +96,9 @@ void printCalculation(int x, int y, int z)
 {
 	std::cout << x + (y * z);
 }
+
+#endif
+
 
 int main()
 {
@@ -590,9 +594,21 @@ int main()
 	std::cout << std::boolalpha << (9.8f == 9.8) << '\n';
 	std::cout << std::boolalpha << (9.8f <= 9.8) << '\n';
 	std::cout << std::boolalpha << (9.8f < 9.8) << '\n';
-#endif
 
 	ch6quiz();
+#endif
+
+
+	// this code and rotl() is for chO2quiz
+	std::bitset<4> bits1{ 0b0001 };
+	std::cout << "bits1 are " << bits1 << '\n';
+	std::cout << "rotl is " << rotl(bits1) << '\n';
+	std::cout << "rotl2 is " << rotl2(bits1) << "\n\n";
+
+	std::bitset<4> bits2{ 0b1001 };
+	std::cout << "bits2 are " << bits2 << '\n';
+	std::cout << "rotl is " << rotl(bits2) << '\n';
+	std::cout << "rotl2 is " << rotl2(bits2) << '\n';
 
 	return 0;
 }

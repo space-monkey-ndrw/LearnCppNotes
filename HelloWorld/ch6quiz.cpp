@@ -1,5 +1,6 @@
+#include "ch6quiz.h"
 #include <iostream>
-#include <string>
+#include <string_view>
 
 std::string_view getQuantityPhrase(int x)
 {
@@ -31,5 +32,5 @@ void ch6quiz()
     int numApples{};
     std::cin >> numApples;
 
-    std::cout << "You have " << getQuantityPhrase(numApples) << ' ' << getApplesPluralized(numApples) << ".\n";
+    std::cout << "You have " << getQuantityPhrase(numApples) << ' ' << getApplesPluralized(numApples) << ".\n\n";
 }

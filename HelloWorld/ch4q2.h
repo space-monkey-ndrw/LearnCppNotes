@@ -1,5 +1,4 @@
 #pragma once
-
 #ifndef CH4Q2_H
 #define CH4Q2_H
 void ch4q2();

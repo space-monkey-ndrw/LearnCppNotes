@@ -1,5 +1,5 @@
-#include <iostream>
 #include "ch4q3.h"
+#include <iostream>
 
 void printHeight(double height, int time)
 {
