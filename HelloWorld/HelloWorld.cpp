@@ -13,6 +13,7 @@
 #include "ch7s3.h"
 #include "ch8s8.h"
 #include <climits>
+#include <limits>
 #include <cstdint>
 #include <iomanip>
 #include <iostream> // for cin, cout...
@@ -20,7 +21,7 @@
 #include <string_view>
 #include <bitset>
 
-#if 0
+#if 1
 bool isPrime(int x)
 {
 	if (x == 2)
@@ -106,11 +107,11 @@ void printCalculation(int x, int y, int z)
 
 int main()
 {
-#if 0
+#if 1
 	// chapter 1.5 - iostream
 	int x{ 5 };
 	std::cout << "x is equal to: " << x << '\n';
-	std::cout << "printing /n instead of \\n gives: " << '/n' << '\n';
+	// std::cout << "printing /n instead of \\n gives: " << '/n' << '\n';
 
 	int y{};
 	std::cout << "enter an int: ";
@@ -137,7 +138,6 @@ int main()
 
 	// chapter 1.9 - literals and operators
 	std::cout << "can chain operations like x = y = 5.\n";
-	int x, y;
 	x = y = 5;
 	std::cout << "x = " << x << " and y = " << y << '\n';
 	std::cout << "std::cout << \"Hello \" prints to console then returns std::cout so << \"world\"; is also printed to console\n";
@@ -170,8 +170,8 @@ int main()
 	std::cout << std::endl;
 
 	// 2.5 - local scope
-	int x{ 5 };
-	int y{ 6 };
+	x = 5;
+	y = 6;
 	std::cout << "add(x, y), local scope x = 5 and y = 6: " << add(x, y) << '\n';
 	std::cout << std::endl;
 
@@ -294,7 +294,7 @@ int main()
 	std::cout << std::endl;
 
 	// 4.4 Signed Integers
-	int x{ 2147483647 };
+	x = 2147483647;
 	std::cout << "x is at max value: " << x << '\n';
 	x = x + 1;
 	std::cout << "x = x + 1, x is now: " << x << '\n';
@@ -302,18 +302,18 @@ int main()
 	std::cout << '\n';
 
 	// 4.5 - Unsigned integers
-	unsigned int y{ 4294967295 };
+	y = 4294967295;
 	std::cout << "unsigned in y is at max value: " << y << '\n';
 	y = y + 1;
 	std::cout << "y = y + 1, y is now: " << y << "\n\n";
-	int s{ -1 };
-	unsigned int u{ 1 };
-	std::cout << "int s = -1, unsigned int u = 1, so should have s < u, but: " << '\n';
-	if (s < u)
-		std::cout << "s{ -1 } is less than u{ 1 }" << '\n';
+	int signedint{ -1 };
+	unsigned int unsignedint{ 1 };
+	std::cout << "int signedint = -1, unsigned int unsignedint = 1, so should have signedint < unsignedint, but: " << '\n';
+	if (signedint < unsignedint)
+		std::cout << "signedint is less than unsignedint" << '\n';
 	else
-		std::cout << "u{ 1 } is less than s{ -1 }" << '\n';
-	std::cout << "because s{ -1 } is implicitly converted to an unsigned int and becomes 4,294,967,295" << '\n';
+		std::cout << "unsignedint is less than signedint" << '\n';
+	std::cout << "because signedint is implicitly converted to an unsigned int and becomes 4,294,967,295" << '\n';
 	std::cout << "avoid unsigned ints unless needed ie. random number generation, encryption, embedded systems, etc.\n\n";
 
 	// 4.6 - fixed-width integers & size_t
@@ -510,7 +510,7 @@ int main()
 	std::cout << "You entered: \'" << c << "\', which has ASCII code " << ascii << ".\n";
 
 	std::cout << '\n';
-
+	std::string s;
 	std::cout << "signed integral values can be converted to unsigned (and vice versa)\n";
 	std::cout << "  converted value unchanged if destination type can hold the value\n";
 	unsigned int u1{ 5 };
@@ -520,10 +520,11 @@ int main()
 	std::cout << "s1 is u1{5} static cast to int: " << s1 << '\n';
 	std::cout << "u2 is s2{5} static cast to unsigned int: " << u2 << '\n';
 	std::cout << "\nif value being converted doesn't fit in destination type, likely modulo wrapped\n";
-	int s{ -1 };
-	std::cout << "  static casting int s{ -1 } to unsigned int gives: " << static_cast<unsigned int>(s) << '\n';
-	unsigned int u{ 4294967295 }; // largest 32-bit unsigned int
-	std::cout << "  static casting unsigned int { 4294967295 } to signed int gives: " << static_cast<int>(u) << '\n';
+	s = -1;
+	std::cout << "  static casting int s{ -1 } to unsigned int gives an error" << '\n';
+	// static_cast<unsigned int>(s) would give an error
+	u2 = 4294967295; // largest 32-bit unsigned int
+	std::cout << "  static casting unsigned int { 4294967295 } to signed int gives: " << static_cast<int>(u2) << '\n';
 
 	std::cout << "\nMost compilers treat std::int8_t and std::uint8_t like (un)signed chars\n";
 	std::int8_t i{ 65 };
@@ -568,12 +569,12 @@ int main()
 	std::cout << "long value using digit separators: " << valueWithDigitSeparators << '\n';
 	ch5s7q1();
 
-	std::string s{ "hello" };
-	std::string_view s2{ s };
-	std::cout << s2 << '\n';
+	std::string string1{ "hello" };
+	std::string_view stringview2{ string1 };
+	std::cout << stringview2 << '\n';
 
-	std::string a{ "hello" }, b{ "world" };
-	std::cout << firstAlphabetical(a, b) << '\n';
+	std::string a1{ "hello" }, b2{ "world" };
+	std::cout << firstAlphabetical(a1, b2) << '\n';
 
 
 	ch5quiz();

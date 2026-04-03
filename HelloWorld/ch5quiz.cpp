@@ -2,6 +2,7 @@
 #include <string>
 #include <string_view>
 #include <iostream>
+#include <cstdint>
 
 std::string getName(int personNum)
 {
@@ -56,7 +57,7 @@ void questionTwo()
 	else
 		std::cout << "No";
 
-	std::cout << '.\n';
+	std::cout << ".\n";
 }
 
 void q2fixed()
