@@ -132,7 +132,11 @@
     <ClCompile Include="ch5s7q1.cpp" />
     <ClCompile Include="ch6quiz.cpp" />
     <ClCompile Include="ch6s3q2.cpp" />
+    <ClCompile Include="ch7s3.cpp" />
+    <ClCompile Include="ch8s8.cpp" />
     <ClCompile Include="chO2quiz.cpp" />
+    <ClCompile Include="chO3quiz.cpp" />
+    <ClCompile Include="chO4q6.cpp" />
     <ClCompile Include="divide.cpp" />
     <ClCompile Include="getInteger.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
@@ -148,7 +152,11 @@
     <ClInclude Include="ch5s7q1.h" />
     <ClInclude Include="ch6quiz.h" />
     <ClInclude Include="ch6s3q2.h" />
+    <ClInclude Include="ch7s3.h" />
+    <ClInclude Include="ch8s8.h" />
     <ClInclude Include="chO2quiz.h" />
+    <ClInclude Include="chO3quiz.h" />
+    <ClInclude Include="chO4q6.h" />
     <ClInclude Include="intExp.h" />
     <ClInclude Include="square.h" />
   </ItemGroup>

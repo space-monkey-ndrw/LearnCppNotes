@@ -8,6 +8,10 @@
 #include "ch6s3q2.h"
 #include "ch6quiz.h"
 #include "chO2quiz.h"
+#include "chO3quiz.h"
+#include "chO4q6.h"
+#include "ch7s3.h"
+#include "ch8s8.h"
 #include <climits>
 #include <cstdint>
 #include <iomanip>
@@ -596,7 +600,6 @@ int main()
 	std::cout << std::boolalpha << (9.8f < 9.8) << '\n';
 
 	ch6quiz();
-#endif
 
 
 	// this code and rotl() is for chO2quiz
@@ -609,6 +612,17 @@ int main()
 	std::cout << "bits2 are " << bits2 << '\n';
 	std::cout << "rotl is " << rotl(bits2) << '\n';
 	std::cout << "rotl2 is " << rotl2(bits2) << '\n';
+
+	chO3quiz();
+
+	chO4q6();
+	chO4q6givenSolution();
+
+	ch7s3();
+#endif
+	ch8s8q2();
+	ch8s8q3();
+	ch8s8q4();
 
 	return 0;
 }

@@ -57,6 +57,18 @@
     <ClCompile Include="chO2quiz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="chO3quiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chO4q6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch7s3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ch8s8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add2.h">
@@ -87,6 +99,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="chO2quiz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chO3quiz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chO4q6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch7s3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch8s8.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

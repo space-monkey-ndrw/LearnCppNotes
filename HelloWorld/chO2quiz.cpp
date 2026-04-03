@@ -1,6 +1,6 @@
 #include "chO2quiz.h"
-#include <bitset>
 #include <iostream>
+#include <bitset>
 
 // "rotl" is bitwise rotate left
 std::bitset<4> rotl(std::bitset<4> bits)
