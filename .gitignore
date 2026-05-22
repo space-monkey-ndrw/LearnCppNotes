@@ -407,12 +407,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+.vscode/
 
 # Local History for Visual Studio Code
 .history/
@@ -426,3 +421,13 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Ignore the local build directory
+/build/
+/cmake-build-debug/
+/cmake-build-release/
+
+# Ignore cache files if they are generated in the root
+CMakeCache.txt
+CMakeFiles/
+

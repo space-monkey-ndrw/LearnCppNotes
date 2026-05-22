@@ -11,6 +11,11 @@
 #include "chO3quiz.h"
 #include "chO4q6.h"
 #include "ch7s3.h"
+#include "ch7s6.h"
+#include "ch7s7.h"
+#include "ch7s8.h"
+#include "ch7s9.h"
+#include "ch7s10.h"
 #include "ch8s8.h"
 #include "ch8quiz.h"
 #include <climits>
@@ -123,9 +128,7 @@ void foo75()
 }
 
 // chapter 7.6 - internal linkage
-void printGx76();
-int add76(int x, int y);
-int publicadd76(int x, int y);
+// todo - include ch7s6.h
 
 // chapter 7.7 - external linkage & variable forward declarations
 extern int g_x77; // forward declaration of g_x77, defined in ch77.cpp
@@ -135,12 +138,10 @@ extern const int g_y77; // forward declaration of g_y77, defined in ch77.cpp
 int ch78();
 
 // chapter 7.9 - inline functions and variables
+void ch79();
 
 int main()
 {
-#if 0
-	std::cout << "--- DEBUGGER IS RUNNING ---" << std::endl;
-
 	// chapter 1.5 - iostream
 	int x{ 5 };
 	std::cout << "x is equal to: " << x << '\n';
@@ -697,7 +698,10 @@ int main()
 	std::cout << "extern can mean 'external linkage' or 'forward declaration'\n";
 
 	std::cout << "\n\nChapter 7.8 - why (non-const) global variables are evil\n";
-	ch78();
+	ch7s8();
+	ch7s9();
+    std::cout << "calling pi() from main.cpp prints: " << pi() << '\n';
+	ch7s10();
 
 	ch8s8q2();
 	ch8s8q3();
@@ -705,8 +709,6 @@ int main()
 
 	ch8quiz1();
 	ch8quiz2();
-#endif
-
 	ch8quiz3();
 
 	return 0;

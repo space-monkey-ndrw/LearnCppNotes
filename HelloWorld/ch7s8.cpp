@@ -1,3 +1,4 @@
+#include "ch7s8.h"
 #include <iostream>
 
 // forward declarations
@@ -17,7 +18,7 @@ int initY()
     return 5;
 }
 
-int ch78()
+int ch7s8()
 {
     std::cout << "g_x78 is: " << g_x78 << '\n';
     std::cout << "g_y78 is: " << g_y78 << '\n';
