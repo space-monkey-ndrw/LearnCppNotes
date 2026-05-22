@@ -3,6 +3,7 @@
 #include <string_view>
 #include <iostream>
 #include <cstdint>
+#include <limits>
 
 std::string getName(int personNum)
 {
@@ -45,10 +46,11 @@ void ch5quiz()
 
 void questionTwo()
 {
-	std::cout << "How old are you?\n";
+	std::cout << "ch5quiz Q2: How old are you?\n";
 
 	std::uint8_t age{};
 	std::cin >> age;
+	std::cout << "age entered: " << age << '\n';
 
 	std::cout << "Allowed to drive a car in Texas: ";
 
@@ -58,14 +60,16 @@ void questionTwo()
 		std::cout << "No";
 
 	std::cout << ".\n";
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 void q2fixed()
 {
-	std::cout << "How old are you?\n";
+	std::cout << "ch5quiz Q2 (fixed): How old are you?\n";
 
 	int age{};
 	std::cin >> age;
+	std::cout << "age entered: " << age << '\n';
 
 	std::cout << "Allowed to drive a car in Texas: ";
 

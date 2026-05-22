@@ -12,6 +12,7 @@
 #include "chO4q6.h"
 #include "ch7s3.h"
 #include "ch8s8.h"
+#include "ch8quiz.h"
 #include <climits>
 #include <limits>
 #include <cstdint>
@@ -21,8 +22,7 @@
 #include <string_view>
 #include <bitset>
 
-#if 1
-bool isPrime(int x)
+bool isPrime1(int x)
 {
 	if (x == 2)
 		return true;
@@ -102,12 +102,45 @@ void printCalculation(int x, int y, int z)
 	std::cout << x + (y * z);
 }
 
-#endif
+// chapter 7.4 - global variables
+namespace Foo
+{
+	int g_x{};
+}
 
+void Hoo()
+{
+	Foo::g_x = 3;
+	std::cout << "in Hoo() set g_x to " << Foo::g_x << '\n';
+}
+
+// chapter 7.5 - variable shadowing
+int x75{ 4 };
+
+void foo75()
+{
+	std::cout << "in foo75(), global x75 is: " << x75 << '\n';
+}
+
+// chapter 7.6 - internal linkage
+void printGx76();
+int add76(int x, int y);
+int publicadd76(int x, int y);
+
+// chapter 7.7 - external linkage & variable forward declarations
+extern int g_x77; // forward declaration of g_x77, defined in ch77.cpp
+extern const int g_y77; // forward declaration of g_y77, defined in ch77.cpp
+
+// chapter 7.8 - why (non-const) global variables are evil
+int ch78();
+
+// chapter 7.9 - inline functions and variables
 
 int main()
 {
-#if 1
+#if 0
+	std::cout << "--- DEBUGGER IS RUNNING ---" << std::endl;
+
 	// chapter 1.5 - iostream
 	int x{ 5 };
 	std::cout << "x is equal to: " << x << '\n';
@@ -585,7 +618,7 @@ int main()
 
 	printCalculation(getValue(), getValue(), getValue());
 
-	
+
 
 
 	std::cout << powint(7, 12) << '\n';
@@ -620,10 +653,61 @@ int main()
 	chO4q6givenSolution();
 
 	ch7s3();
-#endif
+
+	std::cout << "\n\nChapter 7.4 - Global Variables\n";
+	Hoo();
+	std::cout << "after Hoo(), g_x is: " << Foo::g_x << '\n';
+	Foo::g_x = 5;
+	std::cout << "in main, after setting g_x to 5, g_x is: " << Foo::g_x << '\n';
+
+	std::cout << "\n\nChapter 7.5 - Variable Shadowing\n";
+	int apples{ 4 };
+	{
+		std::cout << "in inner scope, apples is: " << apples << '\n';
+		int apples{ 0 };
+		std::cout << "in inner scope, init apples to 0, apples is: " << apples << '\n';
+		apples = 10;
+		std::cout << "in inner scope, changed apples to 10, apples is: " << apples << '\n';
+	}
+	std::cout << "in outer scope, apples is still: " << apples << '\n';
+
+	int x75 { 7 }; // local var hides global var with same name
+	++x75; // increments local x75, not global x75
+	std::cout << "local  x75 is: " << x75 << '\n';
+	std::cout << "calling foo75() which prints global x75\n";
+	foo75();
+	std::cout << "after foo75(), local x75 is: " << x75 << '\n';
+	std::cout << "access global x75 with scope resolution operator: " << ::x75 << '\n';
+
+	std::cout << "\n\nChapter 7.6 - Internal Linkage\n";
+	std::cout << "use static keyword to give a variable internal linkage\n";
+	std::cout << "const  and constexpr variables have internal linkage by default\n";
+	static int g_x76{ 4 };
+	std::cout << "static g_x76 uses main's scope, is: " << g_x76 << '\n';
+	std::cout << "calling printGx76() which prints g_x76 from a.cpp: ";
+	printGx76();
+	std::cout << "calling add(3,4) from main, but add is statid in a.cpp, so won't link\n";
+	// std::cout << add(3, 4) << '\n'; // error
+	std::cout << "calling publicadd76(3, 4) from main works, since not static in a.cpp\n";
+	std::cout << "publicadd76(3, 4) calls static add76(3,4) and gives: " << publicadd76(3, 4) << '\n';
+
+	std::cout << "\n\nChapter 7.7 - external linkage & variable forward declaration\n";
+	std::cout << "extern int g_x77 is " << g_x77 << " and extern const int g_y77 is " << g_y77 << '\n';
+	std::cout << "g_x77 and g_y77 are defined in ch77.cpp\n";
+	std::cout << "extern can mean 'external linkage' or 'forward declaration'\n";
+
+	std::cout << "\n\nChapter 7.8 - why (non-const) global variables are evil\n";
+	ch78();
+
 	ch8s8q2();
 	ch8s8q3();
 	ch8s8q4();
+
+	ch8quiz1();
+	ch8quiz2();
+#endif
+
+	ch8quiz3();
 
 	return 0;
 }

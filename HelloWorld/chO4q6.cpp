@@ -35,5 +35,6 @@ void chO4q6givenSolution()
 	std::cout << ((x / 4) % 2);
 	std::cout << ((x / 2) % 2);
 	std::cout << ((x / 1) % 2);
+	std::cout << '\n';
 }
 
