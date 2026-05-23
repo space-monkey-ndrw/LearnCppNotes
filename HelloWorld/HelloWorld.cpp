@@ -16,6 +16,8 @@
 #include "ch7s8.h"
 #include "ch7s9.h"
 #include "ch7s10.h"
+#include "ch7s11.h"
+#include "ch7s12.h"
 #include "ch8s8.h"
 #include "ch8quiz.h"
 #include <climits>
@@ -142,6 +144,7 @@ void ch79();
 
 int main()
 {
+#if 0
 	// chapter 1.5 - iostream
 	int x{ 5 };
 	std::cout << "x is equal to: " << x << '\n';
@@ -696,13 +699,21 @@ int main()
 	std::cout << "extern int g_x77 is " << g_x77 << " and extern const int g_y77 is " << g_y77 << '\n';
 	std::cout << "g_x77 and g_y77 are defined in ch77.cpp\n";
 	std::cout << "extern can mean 'external linkage' or 'forward declaration'\n";
-
 	std::cout << "\n\nChapter 7.8 - why (non-const) global variables are evil\n";
 	ch7s8();
+	std::cout << "\n\nChapter 7.9 - Inline functions and variables\n";
 	ch7s9();
     std::cout << "calling pi() from main.cpp prints: " << pi() << '\n';
+#endif
+	std::cout << "\n\nChapter 7.10 - Sharing global constants across multiple files using inline variables\n";
 	ch7s10();
 
+	std::cout << "\n\nChapter 7.11 - Static local variables\n";
+	ch7s11();
+
+	std::cout << "\n\nChapter 7.12 - Scope, Duration, Linkage summary\n";
+	ch7s12();
+#if 0
 	ch8s8q2();
 	ch8s8q3();
 	ch8s8q4();
@@ -710,6 +721,7 @@ int main()
 	ch8quiz1();
 	ch8quiz2();
 	ch8quiz3();
+#endif
 
 	return 0;
 }
