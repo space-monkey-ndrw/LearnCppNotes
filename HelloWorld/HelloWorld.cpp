@@ -20,6 +20,7 @@
 #include "ch7s12.h"
 #include "ch8s8.h"
 #include "ch8quiz.h"
+#include "ch9quiz.h"
 #include <climits>
 #include <limits>
 #include <cstdint>
@@ -704,7 +705,7 @@ int main()
 	std::cout << "\n\nChapter 7.9 - Inline functions and variables\n";
 	ch7s9();
     std::cout << "calling pi() from main.cpp prints: " << pi() << '\n';
-#endif
+
 	std::cout << "\n\nChapter 7.10 - Sharing global constants across multiple files using inline variables\n";
 	ch7s10();
 
@@ -713,7 +714,7 @@ int main()
 
 	std::cout << "\n\nChapter 7.12 - Scope, Duration, Linkage summary\n";
 	ch7s12();
-#if 0
+
 	ch8s8q2();
 	ch8s8q3();
 	ch8s8q4();
@@ -722,6 +723,8 @@ int main()
 	ch8quiz2();
 	ch8quiz3();
 #endif
+
+	ch9quiz1();
 
 	return 0;
 }
