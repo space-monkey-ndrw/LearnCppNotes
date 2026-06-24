@@ -21,6 +21,9 @@
 #include "ch8s8.h"
 #include "ch8quiz.h"
 #include "ch9quiz.h"
+#include "ch10s4.h"
+#include "ch10s5.h"
+#include "ch10s6.h"
 #include <climits>
 #include <limits>
 #include <cstdint>
@@ -722,9 +725,25 @@ int main()
 	ch8quiz1();
 	ch8quiz2();
 	ch8quiz3();
-#endif
 
 	ch9quiz1();
+
+	// Chapter 10.3 - Numeric Conversions
+	char c = {'c'};
+	std::cout << "char c cast as double is: " << static_cast<double>(c) << '\n';
+	double d = 0;
+	d = static_cast<double>('c');
+	std::cout << "static_cast<double>('c') is: " << static_cast<double>('c') << '\n';
+	std::cout << "printing 99.0 gives: " << 99.0 << '\n';
+	std::cout << "d is: " << d << '\n';
+	double d2 { 99.0 };
+	std::cout << "d2 is: " << d2 << '\n';
+
+	ch10s4();
+
+	ch10s5();
+#endif
+	ch10s6();
 
 	return 0;
 }
