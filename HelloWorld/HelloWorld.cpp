@@ -24,6 +24,9 @@
 #include "ch10s4.h"
 #include "ch10s5.h"
 #include "ch10s6.h"
+#include "ch10s7.h"
+#include "ch10s8.h"
+#include "ch11s9quiz.h"
 #include <climits>
 #include <limits>
 #include <cstdint>
@@ -740,10 +743,12 @@ int main()
 	std::cout << "d2 is: " << d2 << '\n';
 
 	ch10s4();
-
 	ch10s5();
-#endif
 	ch10s6();
+	ch11s9quiz();
+	ch10s7();
+#endif
+	ch10s8();
 
 	return 0;
 }

@@ -2,7 +2,8 @@
 file(GLOB SOURCES CONFIGURE_DEPENDS "*.cpp")
 
 # Build the HelloWorld executable target
-add_executable(HelloWorld ${SOURCES})
+add_executable(HelloWorld ${SOURCES}
+    ch10s8.h)
 
 # enable implicit type conversion warnings
 target_compile_options(HelloWorld PRIVATE -Wconversion)
