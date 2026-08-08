@@ -26,6 +26,8 @@
 #include "ch10s6.h"
 #include "ch10s7.h"
 #include "ch10s8.h"
+#include "ch10s9.h"
+#include "ch10quiz.h"
 #include "ch11s9quiz.h"
 #include <climits>
 #include <limits>
@@ -747,8 +749,10 @@ int main()
 	ch10s6();
 	ch11s9quiz();
 	ch10s7();
-#endif
 	ch10s8();
+	ch10s9();
+#endif
+	ch10quiz();
 
 	return 0;
 }
