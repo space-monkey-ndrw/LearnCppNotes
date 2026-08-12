@@ -22,13 +22,13 @@ void ch10quiz1() {
     // answers
     // 1a - no conversion
     // 1b - numeric promotion (char to int)
-    // 1c - won't compile due to narrowing conversion
+    // 1c - won't compile due to narrowing conversion (won't compile on my machine)
     // 1d - numeric promotion (bool to int)
     // 1e - numeric conversion  (double to int)
     // 1f - numeric promotion (float to double)
     // 1g - numeric conversion (int to double)
     // 1h - numeric conversion (int to long)
-    // 1i - won't compile due to narrowing conversion
+    // 1i - won't compile due to narrowing conversion (will compile on my machine, only gives a warning)
     // 1j - numeric conversion (double to float) (allowed since 5.0 is constexpr and fits in range of float)
 }
 
