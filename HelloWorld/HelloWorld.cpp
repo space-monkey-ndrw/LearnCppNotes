@@ -35,6 +35,7 @@
 #include "ch11s5.h"
 #include "ch11s6.h"
 #include "ch11s7.h"
+#include "ch11s8.h"
 #include "ch11s9quiz.h"
 #include <climits>
 #include <limits>
@@ -765,8 +766,10 @@ int main()
 	ch11s4();
 	ch11s5();
 	ch11s6();
-#endif
 	ch11s7();
+	ch11s8();
+#endif
+	ch11s8();
 
 	return 0;
 }
