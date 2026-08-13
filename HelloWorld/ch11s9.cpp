@@ -53,6 +53,39 @@ void printAuto11s9()
     cout << N << '\n';
 }
 
+template <int N>
+constexpr int factorial ()
+{
+    int count {N};
+    int product {N};
+    static_assert(N >= 0, "factorial: N must be >= 0");
+
+    if constexpr (N > 0)
+    {
+        while (count >= 2)
+        {
+            count -= 1;
+            product *= count;
+        }
+        return product;
+    }
+
+    return 1;
+}
+
+void ch11s9quizA()
+{
+    static_assert(factorial<0>() == 1);
+    cout << "factorial<" << 0 << ">() is: " << factorial<0>() << '\n';
+    static_assert(factorial<3>() == 6);
+    cout << "factorial<" << 3 << ">() is: " << factorial<3>() << '\n';
+    static_assert(factorial<5>() == 120);
+    cout << "factorial<" << 5 << ">() is: " << factorial<5>() << '\n';
+    cout << "factorial<" << 7 << ">() is: " << factorial<7>() << '\n';
+
+    // factorial<-3>(); // should fail to compile
+}
+
 void ch11s9() {
     cout << "\n === Chapter 11 Section 9 - Non-type template param's === \n\n";
     
@@ -116,4 +149,6 @@ void ch11s9() {
     printAuto11s9<5>();
     cout << "printAuto11s9<'c'>() and N is deduced as char c: \n";
     printAuto11s9<'c'>();
+
+    ch11s9quizA();
 }
