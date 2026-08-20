@@ -59,11 +59,25 @@ constexpr int factorialOriginal() {
     return 1;
 }
 
+constexpr int factorial3(int x)
+{
+    int product {1};
+    while (x >= 2) {
+        product *= x;
+        x--;
+    }
+    return product;
+}
+
 void ch11s9quiz() {
     static_assert(factorial3<0>() == 1);
     static_assert(factorial3<3>() == 6);
     static_assert(factorial3<5>() == 120);
     std::cout << "\nstatic asserts passed\n";
     
+    std::cout << "enter an int (less than 13): ";
+    int num {};
+    std::cin >> num;
+    std::cout << "factorial of " << num << " is: " << factorial3(num) << '\n';
     // factorial<-3>(); // should fail to compile
 }
